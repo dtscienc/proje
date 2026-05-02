@@ -8,7 +8,7 @@ submit a task or bug report. the agent autonomously writes code, tests it, fixes
 - **ai** — groq llama-3.3-70b 
 - **frontend** — single html file, no build step
 
-## get your free api key (no card required)
+## get your free api key 
 
 1. go to **console.groq.com**
 2. sign up with google or email
