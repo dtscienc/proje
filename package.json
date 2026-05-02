@@ -1,0 +1,16 @@
+{
+  "name": "eclatant",
+  "version": "1.0.0",
+  "description": "Eclatant — Autonomous Coding Agent",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.39.0",
+    "@google/generative-ai": "^0.24.1",
+    "dotenv": "^17.4.2",
+    "express": "^4.18.2",
+    "groq-sdk": "^1.1.2"
+  }
+}
