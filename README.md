@@ -6,7 +6,7 @@ submit a task or bug report. the agent autonomously writes code, tests it, fixes
 
 - **backend** — node.js + express (sse streaming)
 - **ai** — groq llama-3.3-70b 
-- **frontend** — single html file, no build step
+- **frontend** — single html file
 
 ## get your free api key 
 
