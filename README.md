@@ -1,11 +1,11 @@
 # eclatant — autonomous coding agent
 
-submit a task or bug report. the agent autonomously writes code, tests it, fixes its own bugs, and iterates until complete.
+submit a task or bug report. the agent autonomously writes code, tests it, fixes it. 
 
 ## stack
 
 - **backend** — node.js + express (sse streaming)
-- **ai** — groq llama-3.3-70b (FREE — no credit card needed)
+- **ai** — groq llama-3.3-70b 
 - **frontend** — single html file, no build step
 
 ## get your free api key (no card required)
@@ -19,7 +19,7 @@ submit a task or bug report. the agent autonomously writes code, tests it, fixes
 ## run
 
 ```bash
-git clone https://github.com/YOURNAME/eclatant.git
+git clone https://github.com/dtscienc/proje.git
 cd eclatant
 npm install
 cp .env.example .env
@@ -30,15 +30,15 @@ npm start
 
 ## how it works
 
-true tool-use agentic loop — the model decides every step autonomously using a set of tools. no scripted prompts between phases. the server hands the model the tools and gets out of the way.
+true tool-use agentic loop — the model decides every step autonomously using a set of tools. no scripted prompts between phases. 
 
-1. `analyse_task` — breaks down the task, identifies edge cases
+1. `analyse_task` — notes edge cases
 2. `write_code` — implements the solution
-3. `run_tests` — traces through the code with real inputs
-4. `report_bug` — logs bugs with root cause and fix plan
+3. `run_tests` — code with real inputs
+4. `report_bug` — logs bugs with cause and fix plan
 5. `mission_complete` — called only when all tests pass
 
-self-healing loop: if run_tests finds failures, the agent calls report_bug then write_code again — loops until everything passes. up to 24 turns.
+self-healing loop: if run_tests finds failures, the agent calls report_bug then write_code again — loops until everything passes. up to 24 iterations. 
 
 ## env vars
 
