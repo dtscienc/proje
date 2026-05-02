@@ -14,7 +14,6 @@ submit a task or bug report. the agent autonomously writes code, tests it, fixes
 2. sign up with google or email
 3. click **API Keys** in the left sidebar
 4. click **Create API key**
-5. copy it
 
 ## run
 
