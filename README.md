@@ -1,4 +1,4 @@
-# eclatant — autonomous coding agent
+# Eclatant — autonomous coding agent
 
 submit a task or bug report. the agent autonomously writes code, tests it, fixes it. 
 
