@@ -19,7 +19,7 @@ submit a task or bug report. the agent autonomously writes code, tests it, fixes
 
 ```bash
 git clone https://github.com/dtscienc/proje.git
-cd eclatant
+cd proje
 npm install
 cp .env.example .env
 # open .env and paste your Groq key in place of: your-groq-api-key-here
