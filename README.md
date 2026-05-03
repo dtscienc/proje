@@ -22,7 +22,7 @@ git clone https://github.com/dtscienc/proje.git
 cd proje
 npm install
 cp .env.example .env
-# open .env and paste your Groq key in place of: your-groq-api-key-here
+# open .env with notepad .env and paste your Groq key in place of: your-groq-api-key-here and ctrl-s
 npm start
 # open http://localhost:3000
 ```
