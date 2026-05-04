@@ -52,3 +52,13 @@ agent returns an error immediately → your GROQ_API_KEY is missing or invalid. 
 page doesn't load → make sure you ran npm install and the server started without errors.
 
 model errors / rate limits → groq's free tier has rate limits. wait a moment and try again.
+
+Example questions:
+
+
+Examples:
+
+Easy — Write a function that merges two sorted arrays into a single sorted array
+Medium — Write a rate limiter class that allows N requests per second and queues the rest
+Hard — Bug: my binary search function returns the wrong index when there are duplicate values in the array
+
