@@ -7,8 +7,6 @@ const app = express();
 app.use(express.json());
 app.use(express.static(path.join(__dirname, "../file")));
 
-const groq = new Groq({ apiKey: process.env.GROQ_API_KEY });
-
 const TOOLS = [
   {
     type: "function",
@@ -135,6 +133,14 @@ app.post("/api/agent/run", async (req, res) => {
 
   const send = (data) => res.write(`data: ${JSON.stringify(data)}\n\n`);
 
+  if (!process.env.GROQ_API_KEY) {
+    send({ type: "error", message: "GROQ_API_KEY is not set. Add it to your .env file." });
+    res.end();
+    return;
+  }
+
+  const groq = new Groq({ apiKey: process.env.GROQ_API_KEY });
+
   const messages = [
     { role: "system", content: SYSTEM },
     { role: "user", content: task }
@@ -197,7 +203,11 @@ app.post("/api/agent/run", async (req, res) => {
           all_passed: args.all_passed
         };
       } else if (name === "report_bug") {
-        result = { acknowledged: true, bug_count: (args.bugs || []).length, instruction: "Fix these bugs now — call write_code with the corrected implementation." };
+        result = {
+          acknowledged: true,
+          bug_count: (args.bugs || []).length,
+          instruction: "Fix these bugs now — call write_code with the corrected implementation."
+        };
       } else if (name === "mission_complete") {
         send({ type: "done", status: "complete", summary: args.summary, final_code: args.final_code, language: args.language });
         didComplete = true;
