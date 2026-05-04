@@ -75,9 +75,6 @@ left = mid + 1
 else:
 right = mid - 1
 return -1
-
-
-# Example with duplicates
 arr = [1, 2, 2, 2, 3]
 print(binary_search(arr, 2)) 
 
