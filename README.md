@@ -1,12 +1,12 @@
-# Eclatant — autonomous coding agent
+# Eclatant - autonomous coding agent
 
 submit a task or bug report. the agent autonomously writes code, tests it, fixes it. 
 
 ## stack
 
-- **backend** — node.js + express (sse streaming)
-- **ai** — groq llama-3.3-70b 
-- **frontend** — single html file
+- **backend** - node.js + express (sse streaming)
+- **ai** - groq llama-3.3-70b 
+- **frontend** - single html file
 
 ## get your free api key 
 
@@ -29,19 +29,19 @@ npm start
 
 ## how it works
 
-true tool-use agentic loop — the model decides every step autonomously using a set of tools. no scripted prompts between phases. 
+true tool-use agentic loop - the model decides every step autonomously using a set of tools. no scripted prompts between phases. 
 
-1. `analyse_task` — notes edge cases
-2. `write_code` — implements the solution
-3. `run_tests` — code with real inputs
-4. `report_bug` — logs bugs with cause and fix plan
-5. `mission_complete` — called only when all tests pass
+1. `analyse_task` - notes edge cases
+2. `write_code` - implements the solution
+3. `run_tests` - code with real inputs
+4. `report_bug` - logs bugs with cause and fix plan
+5. `mission_complete` - called only when all tests pass
 
-self-healing loop: if run_tests finds failures, the agent calls report_bug then write_code again — loops until everything passes. up to 24 iterations. 
+self-healing loop: if run_tests finds failures, the agent calls report_bug then write_code again - loops until everything passes. up to 24 iterations. 
 
 ## env vars
 
 | var | required | default |
 |-----|----------|---------|
-| `GROQ_API_KEY` | yes — free at console.groq.com | — |
+| `GROQ_API_KEY` | yes - free at console.groq.com | - |
 | `PORT` | no | 3000 |
