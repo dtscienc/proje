@@ -64,20 +64,27 @@ Medium - Write a rate limiter class that allows N requests per second and queues
 
 
 Hard - Hard — Bug: my binary search function returns the wrong index when there are duplicate values in the array 
+```python
 def binary_search(arr, target):
-left, right = 0, len(arr) - 1
-while left <= right:
-mid = (left + right) // 2
-if arr[mid] == target:
-return mid 
-elif arr[mid] < target:
-left = mid + 1
-else:
-right = mid - 1
-return -1
+    left, right = 0, len(arr) - 1
+    
+    while left <= right:
+        mid = (left + right) // 2
+        
+        if arr[mid] == target:
+            return mid
+        elif arr[mid] < target:
+            left = mid + 1
+        else:
+            right = mid - 1
+            
+    return -1
+
+
 arr = [1, 2, 2, 2, 3]
-print(binary_search(arr, 2)) 
+print(binary_search(arr, 2))
+```
 
 
-Note: for bug fixes, must add the code function that includes the error. Otherwise, the system would not work. 
+Note: for bug fixes, must add the code function that includes the error. Otherwise, the system would not work since it cannot hypothesise what the code would be. This is applicable to the example questions in the UI.
 
