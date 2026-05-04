@@ -60,5 +60,6 @@ Examples:
 
 Easy - Write a function that merges two sorted arrays into a single sorted array
 Medium - Write a rate limiter class that allows N requests per second and queues the rest
-Hard - Bug: my binary search function returns the wrong index when there are duplicate values in the array
+
+Note: for bug fixes, must add the code function that includes the error. Otherwise, the system would not work. 
 
