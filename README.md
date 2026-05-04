@@ -45,3 +45,10 @@ self-healing loop: if run_tests finds failures, the agent calls report_bug then 
 |-----|----------|---------|
 | `GROQ_API_KEY` | yes - free at console.groq.com | - |
 | `PORT` | no | 3000 |
+
+troubleshooting
+agent returns an error immediately → your GROQ_API_KEY is missing or invalid. check your .env file.
+
+page doesn't load → make sure you ran npm install and the server started without errors.
+
+model errors / rate limits → groq's free tier has rate limits. wait a moment and try again.
